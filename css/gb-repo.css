@@ -9,6 +9,9 @@
   margin-right: 1em;
   font: 12px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 }
+#gb-repo p {
+  color: gray;
+}
 #gb-repo a {
   //background-color: white;
   text-decoration: none;

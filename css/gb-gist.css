@@ -9,6 +9,9 @@
   margin-right: 1em;
   font: 12px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 }
+#gb-gist p {
+  color: gray;
+}
 #gb-gist a {
   //background-color: white;
   text-decoration: none;
