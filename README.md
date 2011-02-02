@@ -1,5 +1,6 @@
 ### github-badge
 
+![github-badge](http://gdemir.me/chrome/sembol/github-badge.png)
 Kendi gb-repo'nuzu sayfanıza eklemek istiyorsanız
 sitenizin index.html içine aşağıdaki kodu koymanız yeterli
 
