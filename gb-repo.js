@@ -19,7 +19,7 @@ GitHubbadge = new function() {
   
   this.repo = function(data) {
     (function($){
-      var head = $("<div>" + GITHUB_TITLE + "(<a href='http://github.com/" + GITHUB_USER + "'>" + GITHUB_USER + "</a>)</div>");
+      var head = $("<div><p>" + GITHUB_TITLE + "(<a href='http://github.com/" + GITHUB_USER + "'>" + GITHUB_USER + "</a> )</p></div>");
       var template = $.template(
         "<ul>"
 	+  "<img src='http://gdemir.me/chrome/sembol/public.png' alt='public' title='${description}'/>"
