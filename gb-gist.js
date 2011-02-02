@@ -7,7 +7,7 @@ GitHubbadge = new function() {
   }
 
   this.dizin_yukle = function() {
-	document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-gist.css" media = "screen" />');
+	document.write('<link rel = "stylesheet" type = "text/css" href = "http://gdemir.me/github-badge/css/gb-gist.css" media = "screen" />');
     this.badge_yukle();
   }
 
