@@ -47,7 +47,7 @@
   padding-right: 10pt;       /* ic kismin sagdan uzakligi          */
   margin-right: 2px;         /* kenar sag dis boslugundan uzakligi */
   margin-left: -6px;         /* kenar sag dis boslugundan uzakligi */
-  margin-bottom: 1px;        /* listenin dis boslugunun uzakligi   */ 
+  margin-bottom: -10px;        /* listenin dis boslugunun uzakligi   */ 
 }
 #gb-gist-footer {
   margin-top: 1px;           /* kenar ust dis boslugundan uzakligi */
