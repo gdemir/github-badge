@@ -2,8 +2,8 @@ var GitHubbadge = {};
 
 GitHubbadge = new function() {	
   this.init = function() {
-    this.tarayici("js/jquery.js");
-    this.tarayici("js/jquery.template.js", "GitHubbadge.dizin_yukle");
+    this.tarayici("http://gdemir.me/github-badge/js/jquery.js");
+    this.tarayici("http://gdemir.me/github-badge/js/jquery.template.js", "GitHubbadge.dizin_yukle");
   }
 
   this.dizin_yukle = function() {
