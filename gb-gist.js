@@ -35,7 +35,7 @@ GitHubbadge = new function() {
       var footer = $(
 	  "<div id='gb-gist-footer'>"
 	    + '<p></p>'
-            + '<span><a href="http://github.com/gdemir/github-badge">github badge</a>designed | by gdemir</span>'
+            + '<span><a href="http://github.com/gdemir/github-badge"> github badge </a> designed | by gdemir</span>'
 	+ "</div>");
      //head ekle
      $('#gb-gist').append(head);
