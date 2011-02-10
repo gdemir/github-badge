@@ -60,12 +60,16 @@ GitHubbadge = new function() {
 					return false;
 			   });
 		$('#gb-orgs ul')
-		.click(function(event) {
-					$(event.currentTarget).find('.orgs').toggle();
-			   })
-	    .find('.orgs')
+	        .find('.orgs')
 		.hide()
-	    .end()
+	        .end()
+		.hover(function () {
+			 $(this).find(".orgs").show("orgs");
+		       },
+		       function () {
+			 $(this).find(".orgs").hide("orgs");
+		       }
+		)
 		.filter(':gt(' + (GITHUB_LENGTH - 1) + ')').hide();
 		if ($('#gb-orgs ul').is(':hidden'))
 			$('#gb-orgs ').append(goster);

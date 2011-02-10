@@ -51,12 +51,16 @@ GitHubbadge = new function() {
 	      return false;
 	   });
      $('#gb-gist ul')
-     .click(function(event) {
-	      $(event.currentTarget).find('.gist').toggle();
-	    })
 	    .find('.gist')
 	    .hide()
 	    .end()
+	    .hover(function () {
+		     $(this).find(".gist").show("gist");
+		  },
+		  function () {
+			$(this).find(".gist").hide("gist");
+		  }
+	    )
 	    .filter(':gt(' + (GITHUB_LENGTH - 1) + ')').hide();
      if ($('#gb-gist ul').is(':hidden'))
        $('#gb-gist ').append(goster);
