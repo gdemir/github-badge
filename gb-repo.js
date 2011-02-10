@@ -60,12 +60,16 @@ GitHubbadge = new function() {
 	      return false;
 	    });
      $('#gb-repo ul')
-     .click(function(event) {
-              $(event.currentTarget).find('.repo').toggle();
-            })
 	    .find('.repo')
 	    .hide()
 	    .end()
+	    .hover(function () {
+		     $(this).find(".orgs").show("orgs");
+		   },
+		   function () {
+		     $(this).find(".orgs").hide("orgs");
+		   }
+	    )
 	    .filter(':gt(' + (GITHUB_LENGTH - 1) + ')').hide();
      if ($('#gb-repo ul').is(':hidden'))
        $('#gb-repo ').append(goster);
