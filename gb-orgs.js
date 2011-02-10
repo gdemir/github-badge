@@ -2,12 +2,13 @@ var GitHubbadge = {};
 
 GitHubbadge = new function() {	
   this.init = function() {
-	this.tarayici("http://gdemir.me/github-badge/js/jquery.js");
-    this.tarayici("http://gdemir.me/github-badge/js/jquery.template.js", "GitHubbadge.dizin_yukle");
+    this.tarayici("js/jquery.js");
+    this.tarayici("js/jquery.template.js", "GitHubbadge.dizin_yukle");
   }
 
   this.dizin_yukle = function() {
-	document.write('<link rel = "stylesheet" type = "text/css" href = "http://gdemir.me/github-badge/css/gb-orgs.css" media = "screen" />');
+    document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-orgs.css" media = "screen" />');
+    document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-orgs-local.css" media = "screen" />');
     this.badge_yukle();
   }
 
@@ -23,12 +24,18 @@ GitHubbadge = new function() {
 		var template = $.template(
 		  "<ul>"
 		  +  "<img src='https://secure.gravatar.com/avatar/${gravatar_id}' alt='gravatar' title='${gravatar_id}'/>"
-		  +  "<strong><a href='http://github.com/${name}' title='${login}' target='_blank'>${login}(${name})</a></strong>"
+		  +  "<strong><a href='http://github.com/${login}' title='${login}' target='_blank'>${login}(${name})</a></strong>"
+		  + " <div id='gb-orgs-follow' >"
+		    + "<a  href='${login}/repo.html'>"
+		      + "<img src='http://gdemir.me/chrome/sembol/public.png' alt='public' title='${login}/public'/>  ${public_repo_count}"
+		    + "</a>"
+		    + "<a  href='${login}/gist.html'>"
+		      + "<img src='http://gdemir.me/chrome/sembol/gist.png'   alt='gist'   title='${login}/gist'  />  ${public_gist_count}"
+		    + "</a>"
+		  + "</div>"
 		  +  "<div id='gb-orgs-describe'>"
 		     +  "<li class='orgs'>Website/blog       : <a href='${blog}'>${blog}  </a></li>"
 			 +  "<li class='orgs'>email              : <a href='${email}'>${email}</a></li>"
-			 +  "<li class='orgs'><img src='http://gdemir.me/chrome/sembol/gist.png'   alt='gist'   title='gist'  />  ${public_gist_count}</li>"
-			 +  "<li class='orgs'><img src='http://gdemir.me/chrome/sembol/public.png' alt='public' title='public'/>  ${public_repo_count}</li>"
 			 //~ +  "<li class='orgs'>takip sayı         : ${following_count}  </li>"
 			 //~ +  "<li class='orgs'>takipci sayı   : ${followers_count}  </li>"
 			 //~ +  "<li class='orgs'>şirket         : ${company}          </li>"
@@ -43,7 +50,7 @@ GitHubbadge = new function() {
 		var footer = $(
 		   "<div id='gb-orgs-footer'>"
 			 + '<p></p>'
-			 + '<span><a href="http://github.com/gdemir/github-badge"> github badge </a> designed | by gdemir</span>'
+			 + '<span>designed | by gdemir</span>'
 		 + "</div>"
 		 );
 		//~ //head eklgist.htmle
@@ -59,16 +66,17 @@ GitHubbadge = new function() {
 					$('#gb-orgs .goster').hide();
 					return false;
 			   });
-		$('#gb-orgs ul')
-	        .find('.orgs')
+		$("#gb-orgs ul")
+		.find(".orgs")
 		.hide()
-	        .end()
-		.hover(function () {
-			 $(this).find(".orgs").show("orgs");
-		       },
-		       function () {
-			 $(this).find(".orgs").hide("orgs");
-		       }
+	    .end()
+		.hover(
+		  function () {
+			$(this).find(".orgs").show("orgs");
+		  },
+		  function () {
+			$(this).find(".orgs").hide("orgs");
+		  }
 		)
 		.filter(':gt(' + (GITHUB_LENGTH - 1) + ')').hide();
 		if ($('#gb-orgs ul').is(':hidden'))
