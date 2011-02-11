@@ -8,7 +8,6 @@ GitHubbadge = new function() {
 
   this.dizin_yukle = function() {
     document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-repo.css" media = "screen" />');
-    document.write('<link rel = "stylesheet" type = "text/css" href = "' + GITHUB_LOCAL + '" media = "screen" />');
     this.badge_yukle();
   }
 
@@ -95,5 +94,4 @@ var GITHUB_USER   = (GITHUB_USER)   || 'gdemir';
 var GITHUB_TITLE  = (GITHUB_TITLE)  || 'projects';
 var GITHUB_LENGTH = (GITHUB_LENGTH) ||  10;
 var GITHUB_SHOW   = (GITHUB_SHOW)   || 'show all';
-var GITHUB_LOCAL  = (GITHUB_LOCAL)   || 'http://gdemir.me/github-badge/css/gb-repo-local.css';
 GitHubbadge.init();

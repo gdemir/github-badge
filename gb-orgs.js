@@ -8,7 +8,6 @@ GitHubbadge = new function() {
 
   this.dizin_yukle = function() {
     document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-orgs.css" media = "screen" />');
-    document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-orgs-local.css" media = "screen" />');
     this.badge_yukle();
   }
 
