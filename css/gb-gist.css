@@ -2,11 +2,11 @@
   ;
 }
 #gb-gist {
-  width: 300px;
-  float: center;
+  width: 350px;
+  float: right;
   clear: right;
-/*margin-top: -30em;*/
-  margin-left: 38em;
+  margin-top: 4em;
+  margin-right: 25em;
   font: 12px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 }
 #gb-gist p {
