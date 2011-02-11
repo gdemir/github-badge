@@ -2,6 +2,7 @@
 
 ![github-badge](http://gdemir.me/chrome/sembol/github-badge.png)
 --
+
 ### github-badge türleri
 --
 - Kendi **repo**nuzu görmek için sitenize aşağıdaki kodu koymanız yeterli
