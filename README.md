@@ -5,6 +5,7 @@
 
 ### github-badge türleri
 --
+
 - Kendi **repo**nuzu görmek için sitenize aşağıdaki kodu koymanız yeterli
 
 		<script type="text/javascript" charset="utf-8">
