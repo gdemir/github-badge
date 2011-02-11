@@ -3,11 +3,12 @@ var GitHubbadge = {};
 GitHubbadge = new function() {	
   this.init = function() {
     this.tarayici("js/jquery.js");
+    this.tarayici("js/jquery-1.5.js");
     this.tarayici("js/jquery.template.js", "GitHubbadge.dizin_yukle");
   }
 
   this.dizin_yukle = function() {
-    document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-orgs.css" media = "screen" />');
+	document.write('<link rel = "stylesheet" type = "text/css" href = "chrome/css/gb-orgs.css" media = "screen" />');
     this.badge_yukle();
   }
 
@@ -23,7 +24,6 @@ GitHubbadge = new function() {
 		var template = $.template(
 		  "<ul>"
 		  +  "<img src='https://secure.gravatar.com/avatar/${gravatar_id}' alt='gravatar' title='${gravatar_id}'/>"
-		  +  "<strong><a href='http://github.com/${login}' title='${login}' target='_blank'>${login}(${name})</a></strong>"
 		  + " <div id='gb-orgs-follow' >"
 		    + "<a  href='${login}/repo.html'>"
 		      + "<img src='http://gdemir.me/chrome/sembol/public.png' alt='public' title='${login}/public'/>  ${public_repo_count}"
@@ -32,6 +32,7 @@ GitHubbadge = new function() {
 		      + "<img src='http://gdemir.me/chrome/sembol/gist.png'   alt='gist'   title='${login}/gist'  />  ${public_gist_count}"
 		    + "</a>"
 		  + "</div>"
+		  +  "<strong><a href='http://gdemir.me/19badge/${login}' title='${login}' target='_blank'>${login}(${name})</a></strong>"
 		  +  "<div id='gb-orgs-describe'>"
 		     +  "<li class='orgs'>Website/blog       : <a href='${blog}'>${blog}  </a></li>"
 			 +  "<li class='orgs'>email              : <a href='${email}'>${email}</a></li>"

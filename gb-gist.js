@@ -3,6 +3,7 @@ var GitHubbadge = {};
 GitHubbadge = new function() {	
   this.init = function() {
     this.tarayici("js/jquery.js");
+    this.tarayici("js/jquery-1.5.js");
     this.tarayici("js/jquery.template.js", "GitHubbadge.dizin_yukle");
   }
 

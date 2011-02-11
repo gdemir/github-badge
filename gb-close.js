@@ -2,21 +2,19 @@ var GitHubbadge = {};
 
 GitHubbadge = new function() {	
   this.init = function() {
-	this.tarayici("chrome/js/jquery.js");
-	this.tarayici("chrome/js/jquery-1.5.js");
-    this.tarayici("chrome/js/jquery.template.js", "GitHubbadge.dizin_yukle");
+	this.tarayici("js/jquery.js");
+	this.tarayici("js/jquery-1.5.js");
+    this.tarayici("js/jquery.template.js", "GitHubbadge.dizin_yukle");
   }
 
   this.dizin_yukle = function() {
-	document.write('<link rel = "stylesheet" type = "text/css" href = "chrome/css/gb-close.css" media = "screen" />');
+	document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-close.css" media = "screen" />');
     this.badge_yukle();
   }
 
   this.badge_yukle = function() {
 	document.write("<div id='gb-close'>");
-	
 	  GitHubbadge.tarayici("http://github.com/api/v2/json/issues/list/" + GITHUB_USER + "/" + GITHUB_USER + "/closed?callback=GitHubbadge.close");
-	  
 	document.write("</div>");
   };
   
