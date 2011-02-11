@@ -2,13 +2,13 @@ var GitHubbadge = {};
 
 GitHubbadge = new function() {	
   this.init = function() {
-	this.tarayici("js/jquery.js");
-	this.tarayici("js/jquery-1.5.js");
-    this.tarayici("js/jquery.template.js", "GitHubbadge.dizin_yukle");
+    this.tarayici("http://gdemir.me/github-badge/js/jquery.js");
+    this.tarayici("http://gdemir.me/github-badge/js/jquery-1.5.js");
+    this.tarayici("http://gdemir.me/github-badge/js/jquery.template.js", "GitHubbadge.dizin_yukle");
   }
 
   this.dizin_yukle = function() {
-	document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-close.css" media = "screen" />');
+	document.write('<link rel = "stylesheet" type = "text/css" href = "http://gdemir.me/github-badge/css/gb-close.css" media = "screen" />');
     this.badge_yukle();
   }
 
