@@ -1,3 +1,6 @@
+--
+Copyright © 2011 | by gdemir
+--
 
 ![github-badge](http://gdemir.me/chrome/sembol/github-badge.png)
 
@@ -57,8 +60,7 @@
 
 sitenize eklediğiniz koddaki **badge**nin yerini değiştirmek için  
 cssin **!important** özelliğini kullanınız  
-**local.css**iniz  
-// ör. repo için
+// ör. repo için **local.css**de aşağıdaki gibi bir kod kullanmak yeterlidir.	
 	
       #gb-repo {
           width: 408px !important;
@@ -68,8 +70,6 @@ cssin **!important** özelliğini kullanınız
           margin-left: 25em !important;
           margin-bottom: 5em !important;
        }
-
-ekleminiz yeterlidir.	
 	
 
 ### açıklama
@@ -89,6 +89,4 @@ ekleminiz yeterlidir.
 - githu-badgenin tamamını görmek için tıklanacak yazı ismi :
 
 		  GITHUB_SHOW   = "hepsini göster"
---
-Copyright © 2011 | by gdemir
---
+
