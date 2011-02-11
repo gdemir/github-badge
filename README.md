@@ -52,7 +52,7 @@ github-badge türleri
 		<script type="text/javascript" charset="utf-8">
 		  GITHUB_USER   = "19";
 		  GITHUB_LENGTH = 10;
-		  GITHUB_TITLE  = "kapalı görevlerimiz"
+		  GITHUB_TITLE  = "üyelerimiz"
 		  GITHUB_SHOW   = "hepsini göster"
 		</script>
 		<script src="http://gdemir.me/github-badge/gb-orgs.js" type="text/javascript"></script>
