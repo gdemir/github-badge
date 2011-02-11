@@ -1,10 +1,10 @@
---
-Copyright © 2011 | by gdemir
---
+
 
 ![github-badge](http://gdemir.me/chrome/sembol/github-badge.png)
-
+Copyright © 2011 | by gdemir
+--
 ### github-badge türleri
+--
 
 - Kendi **repo**nuzu görmek için sitenize aşağıdaki kodu koymanız yeterli
 
@@ -90,3 +90,5 @@ cssin **!important** özelliğini kullanınız
 
 		  GITHUB_SHOW   = "hepsini göster"
 
+Copyright © 2011 | by gdemir
+--
