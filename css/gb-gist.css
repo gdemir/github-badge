@@ -51,6 +51,8 @@
 }
 #gb-gist-footer {
   margin-top: 1px; /* kenar ust dis boslugundan uzakligi */
+  text-align: center;
+  font: bold 90% FreeSans,Helvetica,Arial,sans-serif;
 }
 #gb-gist-footer a {
   color: #4183c4;
