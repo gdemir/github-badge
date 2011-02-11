@@ -1,24 +1,16 @@
 #gb-close {
-  width: 420px;
-  float: left;
-  clear: right;
-  margin-top: 4em;
-  margin-left: 15em;
-  margin-bottom: 5em;
+  width: 420px !important;
 }
 #gb-open {
-  width: 420px;
-  float: left;
-  clear: right;
-  margin-top: 4em;
-  margin-left: 15em;
-  margin-bottom: 5em;
+  width: 420px !important;
 }
 #gb-repo {
   width: 800px !important;
-  float: center;
-  clear: right;
-  margin-left: 38em;
-  font: 12px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+#gb-gist {
+  width: 800px !important;
+}
+#gb-orgs {
+  width: 800px !important;
 }
 
