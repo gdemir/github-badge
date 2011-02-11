@@ -13,9 +13,7 @@ GitHubbadge = new function() {
   }
 
   this.badge_yukle = function() {
-    document.write("<div id='gb-repo'>");
       GitHubbadge.tarayici("http://github.com/api/v1/json/" + GITHUB_USER + "?callback=GitHubbadge.repo");
-    document.write("</div>");
   };
   
   this.repo = function(data) {

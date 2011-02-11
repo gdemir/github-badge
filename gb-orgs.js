@@ -48,11 +48,10 @@ GitHubbadge = new function() {
 	   +  "</ul>"
 		);
 		var footer = $(
-		   "<div id='gb-orgs-footer'>"
-			 + '<p></p>'
-			 + '<span>designed | by gdemir</span>'
-		 + "</div>"
-		 );
+	  "<div id='gb-orgs-footer'>"
+	    + '<p></p>'
+            + '<span><a href="http://github.com/gdemir/github-badge"> github badge </a> designed | by gdemir</span>'
+	+ "</div>");
 		//~ //head eklgist.htmle
 		$('#gb-orgs').append(head);
 		//~ //repo ekle
