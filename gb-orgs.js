@@ -8,15 +8,15 @@ GitHubbadge = new function() {
   }
 
   this.dizin_yukle = function() {
-	document.write('<link rel = "stylesheet" type = "text/css" href = "chrome/css/gb-orgs.css" media = "screen" />');
+    document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-orgs.css" media = "screen" />');
     this.badge_yukle();
   }
 
   this.badge_yukle = function() {
-	document.write("<div id='gb-orgs'>");
-	  GitHubbadge.tarayici("http://github.com/api/v2/json/organizations/19/public_members?callback=GitHubbadge.orgs");
-	document.write("</div>");
-  };
+    document.write("<div id='gb-orgs'>");
+      GitHubbadge.tarayici("http://github.com/api/v2/json/organizations/19/public_members?callback=GitHubbadge.orgs");
+    document.write("</div>");
+  }
   
   this.orgs = function(data) {
 	  (function($){
@@ -57,30 +57,30 @@ GitHubbadge = new function() {
 		//~ //repo ekle
 		repos = data.users.sort();
 		$.each(repos, function(index) {
-								$('#gb-orgs').append(template, this);
-					  });
+					        $('#gb-orgs').append(template, this);
+					      });
 		var goster = $("<br/><div><a href='#' class='goster'>" + GITHUB_SHOW + " (" + repos.length + ")</a></div>")
 		.click(function(event) {
-					$('#gb-orgs  ul').show();
-					$('#gb-orgs .goster').hide();
-					return false;
+					 $('#gb-orgs  ul').show();
+					 $('#gb-orgs .goster').hide();
+					 return false;
 			   });
 		$("#gb-orgs ul")
 		.find(".orgs")
 		.hide()
-	    .end()
+	        .end()
 		.hover(
 		  function () {
-			$(this).find(".orgs").show("orgs");
+		    $(this).find(".orgs").show("orgs");
 		  },
 		  function () {
-			$(this).find(".orgs").hide("orgs");
+		    $(this).find(".orgs").hide("orgs");
 		  }
 		)
 		.filter(':gt(' + (GITHUB_LENGTH - 1) + ')').hide();
 		if ($('#gb-orgs ul').is(':hidden'))
-			$('#gb-orgs ').append(goster);
-		//~ //footer ekle
+		  $('#gb-orgs ').append(goster);
+		//footer ekle
 		$('#gb-orgs').append(footer);
 	  })(jQuery);
   };
