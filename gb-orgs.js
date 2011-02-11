@@ -8,7 +8,7 @@ GitHubbadge = new function() {
   }
 
   this.dizin_yukle = function() {
-    document.write('<link rel = "stylesheet" type = "text/css" href = "css/gb-orgs.css" media = "screen" />');
+    document.write('<link rel = "stylesheet" type = "text/css" href = "http://gdemir.me/github-badge/css/gb-orgs.css" media = "screen" />');
     this.badge_yukle();
   }
 
