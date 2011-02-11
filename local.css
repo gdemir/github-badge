@@ -23,4 +23,19 @@
   margin-top: 5em !important;
   margin-left: 44.5em !important;
 }
+#gb-repo ul {
+  margin-bottom: -10px !important;
+}
+#gb-gist ul {
+  margin-bottom: -10px !important;
+}
+#gb-open ul {
+  margin-bottom: -10px !important;
+}
+#gb-close ul {
+  margin-bottom: -10px !important;
+}
 
+#gb-orgs ul {
+  margin-bottom: -10px !important;
+}
