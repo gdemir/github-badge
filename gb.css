@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+  padding-left: 220px;
+  padding-right: 230px;
+  margin-top: 2em;
+  font: 13.34px helvetica,arial,clean,sans-serif;
+  font-size: small;
+  color: gray;
+}
+img {
+  border-style:none;
+}
+#ribbon {
+  -moz-box-shadow: 0 0 1em #E0B0B0;
+  -moz-transform: rotate(-45deg);
+  background-color: #9d93ac;
+  left: -3em;
+  overflow: hidden;
+  position: absolute;
+  top: 2.5em;
+}
+#ribbon a {
+  border: 1px solid #9d93f6;
+  color: #FFFFFF;
+  display: block;
+  font: bold 90% FreeSans,Helvetica,Arial,sans-serif;
+  margin: 0.05em 0 0.075em;
+  padding: 0.5em 3.5em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 0.5em #444444;
+}
+#footer {
+  font: bold 90% FreeSans,Helvetica,Arial,sans-serif;
+  text-align: center;
+}
+#head {
+  text-align: center;
+  padding-bottom: 10pt;
+}
+#info {
+  text-align: center;
+  font: bold 90% FreeSans,Helvetica,Arial,sans-serif;
+}

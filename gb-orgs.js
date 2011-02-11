@@ -14,7 +14,7 @@ GitHubbadge = new function() {
 
   this.badge_yukle = function() {
     document.write("<div id='gb-orgs'>");
-      GitHubbadge.tarayici("http://github.com/api/v2/json/organizations/19/public_members?callback=GitHubbadge.orgs");
+      GitHubbadge.tarayici("http://github.com/api/v2/json/organizations/" + GITHUB_USER + "/public_members?callback=GitHubbadge.orgs");
     document.write("</div>");
   }
   
