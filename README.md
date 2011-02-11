@@ -1,7 +1,6 @@
 
 
 ![github-badge](http://gdemir.me/chrome/sembol/github-badge.png)
-Copyright © 2011 | by gdemir
 --
 ### github-badge türleri
 --
