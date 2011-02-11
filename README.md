@@ -1,29 +1,76 @@
-### github-badge
 
 ![github-badge](http://gdemir.me/chrome/sembol/github-badge.png)
 
+### github-badge türleri
 
-Kendi gb-repo'nuzu sayfanıza eklemek istiyorsanız
-sitenizin index.html içine aşağıdaki kodu koymanız yeterli
+- Kendi **repo**nuzu görmek için sitenize aşağıdaki kodu koymanız yeterli
 
 		<script type="text/javascript" charset="utf-8">
 		  GITHUB_USER   = "gdemir";
-		  GITHUB_LENGTH = 5;
+		  GITHUB_LENGTH = 10;
 		  GITHUB_TITLE  = "projelerim"
 		  GITHUB_SHOW   = "hepsini göster"
 		</script>
 		<script src="http://gdemir.me/github-badge/gb-repo.js" type="text/javascript"></script>
 
-Kendi gb-gist'izi sayfanıza eklemek istiyorsanız
-sitenizin index.html içine aşağıdaki kodu koymanız yeterli
+- Kendi **gist**nizi görmek için sitenize aşağıdaki kodu koymanız yeterli
 
 		<script type="text/javascript" charset="utf-8">
 		  GITHUB_USER   = "gdemir";
-		  GITHUB_LENGTH = 5;
+		  GITHUB_LENGTH = 10;
 		  GITHUB_TITLE  = "gistlerim"
 		  GITHUB_SHOW   = "hepsini göster"
 		</script>
 		<script src="http://gdemir.me/github-badge/gb-gist.js" type="text/javascript"></script>
+
+- Kendi reponuzun **open issues**lerini görmek için sitenize aşağıdaki kodu koymanız yeterli (repo ismi ile kullanıcı ismi aynı olmalıdır)
+
+		<script type="text/javascript" charset="utf-8">
+		  GITHUB_USER   = "19";
+		  GITHUB_LENGTH = 10;
+		  GITHUB_TITLE  = "açık görevlerimiz"
+		  GITHUB_SHOW   = "hepsini göster"
+		</script>
+		<script src="http://gdemir.me/github-badge/gb-open.js" type="text/javascript"></script>
+
+- Kendi reponuzun **close issues**lerini görmek için sitenize aşağıdaki kodu koymanız yeterli (repo ismi ile kullanıcı ismi aynı olmalıdır)
+
+		<script type="text/javascript" charset="utf-8">
+		  GITHUB_USER   = "19";
+		  GITHUB_LENGTH = 10;
+		  GITHUB_TITLE  = "kapalı görevlerimiz"
+		  GITHUB_SHOW   = "hepsini göster"
+		</script>
+		<script src="http://gdemir.me/github-badge/gb-close.js" type="text/javascript"></script>
+
+- Bir **orgs**(organizasyon)daki üyelerin bilgilerini görmek için sitenize aşağıdaki kodu koymanız yeterli
+
+		<script type="text/javascript" charset="utf-8">
+		  GITHUB_USER   = "19";
+		  GITHUB_LENGTH = 10;
+		  GITHUB_TITLE  = "kapalı görevlerimiz"
+		  GITHUB_SHOW   = "hepsini göster"
+		</script>
+		<script src="http://gdemir.me/github-badge/gb-orgs.js" type="text/javascript"></script>
+
+### css ayarları
+
+sitenize eklediğiniz koddaki **badge**nin yerini değiştirmek için  
+cssin **!important** özelliğini kullanınız  
+**local.css**iniz  
+// ör. repo için
+	
+      #gb-repo {
+          width: 408px !important;
+          float: left !important;
+          clear: right !important;
+          margin-top: 4em !important;
+          margin-left: 25em !important;
+          margin-bottom: 5em !important;
+       }
+
+ekleminiz yeterlidir.	
+	
 
 ### açıklama
 
@@ -42,5 +89,6 @@ sitenizin index.html içine aşağıdaki kodu koymanız yeterli
 - githu-badgenin tamamını görmek için tıklanacak yazı ismi :
 
 		  GITHUB_SHOW   = "hepsini göster"
-
-
+--
+Copyright © 2011 | by gdemir
+--
