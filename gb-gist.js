@@ -23,7 +23,7 @@ GitHubbadge = new function() {
             var head   = $("<div><p>" + GITHUB_TITLE + "(<a href='http://gist.github.com/" + GITHUB_USER + "'>" + GITHUB_USER + "</a> )</p></div>");
             var template = $.template(
               "<ul>"
-              + "<img src='http://gdemir.me/chrome/sembol/git.png' alt='public' title='${description}'>"
+              + "<img src='http://gdemir.me/chrome/sembol/gist.png' alt='public' title='${description}'>"
               + "<strong><a href='http://gist.github.com/${repo}' title='${description}' target='_blank'>${repo}</a></strong>"
               + "<div id='gb-gist-describe'>"
                 + "<li class='gist'>dosya           : ${files}      </li>"
