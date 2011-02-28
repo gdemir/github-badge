@@ -64,10 +64,10 @@ GitHubbadge = new function() {
 	    .end()
 	    .hover(
 	           function () {
-	             $(this).find(".open").show("open");
+	             $(this).find(".open").show("fast");
 	           },
 	           function () {
-		     $(this).find(".open").hide("open");
+		     $(this).find(".open").hide("fast");
 		   }
 	    )
 	    .filter(':gt(' + (GITHUB_LENGTH - 1) + ')').hide();
