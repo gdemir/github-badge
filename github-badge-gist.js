@@ -3,16 +3,16 @@ var GitHubBadge = {};
 GitHubBadge = new function() {
   this.init = function() {
 
-    this.tarayici("javascripts/jquery.js");
-    this.tarayici("gb-gist.js");
-    this.tarayici("javascripts/jquery.template.js", "GitHubBadge.css_yukle");
+    this.tarayici("http://gdemir.me/github-badge/javascripts/jquery.js");
+    this.tarayici("http://gdemir.me/github-badge/gb-gist.js");
+    this.tarayici("http://gdemir.me/github-badge/javascripts/jquery.template.js", "GitHubBadge.css_yukle");
   }
 
   this.css_yukle = function() {
     if(typeof jQuery == 'undefined' || typeof jQuery.template == 'undefined')
       throw("GitHub Badge requires jQuery and jQuery.template");
 
-    var url = 'stylesheets/github-badge.css';
+    var url = 'http://gdemir.me/github-badge/stylesheets/github-badge.css';
     var style_id = 'badge';
     if ("jQuery" in window) {
         jQuery('head').prepend(
@@ -48,7 +48,6 @@ GitHubBadge = new function() {
     })(jQuery);
     this.badge_yukle(username);
   };
-
 
   this.badge_yukle = function(username) {
       this.tarayici(

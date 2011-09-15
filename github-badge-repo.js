@@ -49,7 +49,6 @@ GitHubBadge = new function() {
     this.badge_yukle(username);
   };
 
-
   this.badge_yukle = function(username) {
       this.tarayici(
         "http://github.com/api/v1/json/" + username + "?callback=GitHubBadge.repo");

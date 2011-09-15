@@ -1,13 +1,12 @@
+@import 'box.css';
 #github-badge {
   padding: .2em;
   color: black;
-  background-color: white;
   font: 12px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 }
 
 #github-badge a {
   color: #4183c4; /* blue */
-  background-color: white;
   text-decoration: none;
 }
 

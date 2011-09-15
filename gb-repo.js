@@ -1,4 +1,3 @@
-
 GitHubBadge.repo = function(data) {
   (function($){
     var template = $.template(
@@ -20,7 +19,7 @@ GitHubBadge.repo = function(data) {
     });
     var showLimit = window.GITHUB_LIST_LENGTH || 10;
 
-    var showAllName = ("GITHUB_SHOW_ALL" in window && GITHUB_SHOW_ALL) || 'Show all';
+    var showAllName = ("GITHUB_SHOW_ALL" in window && GITHUB_SHOW_ALL) || 'Hepsini göster';
     var showMore = $("<div><a href='#' class='more'>" + showAllName + " (" + orderedRepos.length + ")</a></div>")
       .find('a')
       .click(function(event) {
@@ -45,25 +44,31 @@ GitHubBadge.repo = function(data) {
 
 (function($){
   $.fn.buildBody = function() {
-    return this.append($("<div class='body'>loading...</div>"));
+    return this.append($("<div class='body'>yükleniyor...</div>"));
   };
 
   $.fn.buildHeader = function(title, username) {
     var template = $.template(
       "<div class='header'><span class='title'>${title}</span> <span>("
-      +   "<a href='http://github.com/${username}'>${username}</a>)"
-      + "</span></div>")
+      +   "<a href='http://github.com/${username}'>${username}</a>"
+      + ")</span></div>")
     return this.append(template, { title: title, username: username });
   };
 
   $.fn.buildFooter = function() {
     return this.append($(
       "<div class='footer'>"
-        + "<a href='http://gdemir.me/github-badge'>GitHub Badge</a>"
-        + " | "
-        + "Written by <a href='http://gdemir.me'>Gökhan Demir</a>"
-      + "</div>"
-      + "</fieldset>"
-      ));
+    + "<a href='http://gdemir.me/github-badge'>GitHub Badge</a>"
+    + " | Designed by"
+      + "<ul class='recent photos' style='margin-top:-15px;'>"
+        + "<li>"
+        + "<a href='http://gdemir.me' title='Gökhan Demir' style='margin-top:-10px;margin-left:100px;'>"
+            + "<img src='https://secure.gravatar.com/avatar/80a2435e5770620fae90c2b7212188f3gKJDXldwYg+ukMK3ISGI8w=='"
+            + "width='25' height='25'/>"
+          + "</a>"
+        + "</li>"
+      + "</ul>"
+    + "</div>"
+  ));
   };
 })(jQuery);
