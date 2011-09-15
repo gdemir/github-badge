@@ -3,7 +3,7 @@ GitHubBadge.gist = function(data) {
     var template = $.template(
       "<li class='public clickable'>"
       +  "<img src='http://gdemir.me/github-badge/images/gist.png' alt='public' title='${description}'>"
-      +  "<strong><a href='${url}' title='${description}' target='_blank'>${files}</a></strong>"
+      +  "<strong><a href='http://gist.github.com/${repo}' title='${description}' target='_blank'>${description}</a></strong>"
       +  "<div class='description'>${files}</div>"
       +"</li>"
     );
