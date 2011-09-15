@@ -1,101 +1,69 @@
-var GitHubbadge = {};
 
-GitHubbadge = new function() {	
-  this.init = function() {
-    this.tarayici("http://gdemir.me/github-badge/js/jquery.js");
-    this.tarayici("http://gdemir.me/github-badge/js/jquery-1.5.js");
-    this.tarayici("http://gdemir.me/github-badge/js/jquery.template.js", "GitHubbadge.dizin_yukle");
-  }
+GitHubBadge.repo = function(data) {
+  (function($){
+    var template = $.template(
+      "<li class='public clickable'>"
+      +  "<img src='http://github.com/images/icons/public.png' alt='public' title='${description}'>"
+      +  "<strong><a href='${url}' title='${description}' target='_blank'>${name}</a></strong>"
+      +  "<div class='description'>${description}</div>"
+      +"</li>"
+    );
 
-  this.dizin_yukle = function() {
-    document.write('<link rel = "stylesheet" type = "text/css" href = "http://gdemir.me/github-badge/css/gb-repo.css" media = "screen" />');
-    this.badge_yukle();
-  }
+    var list = $("<div class='repos'><ul id='repo_listing'></ul></div>");
+    $('#github-badge .body')
+      .empty()
+      .append(list);
+    list = list.find('ul');
+    orderedRepos = data.user.repositories;
+    $.each(orderedRepos, function(index) {
+      list.append(template, this);
+    });
+    var showLimit = window.GITHUB_LIST_LENGTH || 10;
 
-  this.badge_yukle = function() {
-    document.write('<div id="gb-repo">');
-      GitHubbadge.tarayici("http://github.com/api/v1/json/" + GITHUB_USER + "?callback=GitHubbadge.repo");
-    document.write('</div>');
-  };
-  
-  this.repo = function(data) {
-         (function($){
-           var head = $("<div><p>" + GITHUB_TITLE + "(<a href='http://github.com/" + GITHUB_USER + "'>" + GITHUB_USER + "</a> )</p></div>");
-      	   var template = $.template(
-             "<ul>"
-	     + "<img src='http://gdemir.me/chrome/sembol/public.png' alt='public' title='${description}'/>"
-	     + "<strong><a href='${url}' title='${description}' target='_blank'>${name}</a></strong>"
-	     + "<div id='gb-repo-describe'>"
-	       + "<li class='repo'>tanım          : ${description}  </li>"
-	       + "<li class='repo'>size           : ${size}         </li>"
-           //~ + "<li class='repo'>oluşturulma    : ${created_at}   </li>"
-           //~ + "<li class='repo'>wiki durum     : ${has_wiki}     </li>"
-           //~ + "<li class='repo'>izleyenler     : ${watchers}     </li>"
-           //~ + "<li class='repo'>fork durum     : ${fork}         </li>"
-           //~ + "<li class='repo'>url            : ${url}          </li>"
-           //~ + "<li class='repo'>son güncelleme : ${pushed_at}    </li>"
-           //~ + "<li class='repo'>download durum : ${has_downloads}</li>"
-           //~ + "<li class='repo'>açık issues    : ${open_issues}  </li>"
-           //~ + "<li class='repo'>issues durum   : ${has_issues}   </li>"
-           //~ + "<li class='repo'>website        : ${homapage}     </li>"
-           //~ + "<li class='repo'>fork sayı      : ${forks}        </li>"
-           //~ + "<li class='repo'>sahip          : ${owner}        </li>"
-             + "</div>"
-           + "</ul>"
-           );
-     	   var footer = $(
-  	     "<div id='gb-repo-footer'>"
-	     + '<p></p>'
-       	     + '<span><a href="http://github.com/gdemir/github-badge"> github badge </a> designed | by gdemir</span>'
-     	     + "</div>"
-           );
-           //head ekle
-           $('#gb-repo').append(head);
-           //repo ekle
-           repos = data.user.repositories.sort();
-           $.each(repos, function(index) {
-	                   $('#gb-repo').append(template, this);
-	 	         });
-           var goster = $("<br/><div><a href='#' class='goster'>" + GITHUB_SHOW + " (" + repos.length + ")</a></div>")
-           .click(function(event) {
-	            $('#gb-repo  ul').show();
-	            $('#gb-repo .goster').hide();
-	            return false;
-	          });
-	   $('#gb-repo ul')
-	   .find('.repo')
-	   .hide()
-	   .end()
-	   .hover(
-		  function () {
-		    $(this).find(".repo").show("fast");
-		  },
-		  function () {
-		    $(this).find(".repo").hide("fast");
-		  }
-	   )
-	   .filter(':gt(' + (GITHUB_LENGTH - 1) + ')').hide();
-  	   if ($('#gb-repo ul').is(':hidden'))
-	     $('#gb-repo ').append(goster);
-           //footer ekle
-           $('#gb-repo').append(footer);
-     })(jQuery);
-  };
+    var showAllName = ("GITHUB_SHOW_ALL" in window && GITHUB_SHOW_ALL) || 'Show all';
+    var showMore = $("<div><a href='#' class='more'>" + showAllName + " (" + orderedRepos.length + ")</a></div>")
+      .find('a')
+      .click(function(event) {
+        $('#github-badge .body li').show();
+        $('#github-badge .more').hide();
+        return false;
+      });
 
-  this.tarayici = function (url, callback) {
-    if ("jQuery" in window && url.match(/^http/)) {
-      if (typeof callback != "undefined")
-        jQuery.getScript(url, function() { eval(callback + "()") });
-      else
-        jQuery.getScript(url);
-    } else {
-      onLoadStr = (typeof callback == "undefined") ? "" : 'onload="' + callback + '()" ';
-      document.write('<script ' + onLoadStr + 'type="text/javascript" src="'+url+'"></script>');
-    }
-  }
+    $('#github-badge .body li')
+    .click(function(event) {
+      $(event.currentTarget).find('.description').toggle();
+    })
+    .find('.description')
+      .hide()
+      .end()
+    .filter(':gt(' + (showLimit - 1) + ')').hide() // hide extras
+    if ($('#github-badge .body li').is(':hidden'))
+      $('#github-badge .body').append(showMore);
+
+  })(jQuery);
 };
-var GITHUB_USER   = (GITHUB_USER)   || 'gdemir';
-var GITHUB_TITLE  = (GITHUB_TITLE)  || 'projects';
-var GITHUB_LENGTH = (GITHUB_LENGTH) ||  10;
-var GITHUB_SHOW   = (GITHUB_SHOW)   || 'show all';
-GitHubbadge.init();
+
+(function($){
+  $.fn.buildBody = function() {
+    return this.append($("<div class='body'>loading...</div>"));
+  };
+
+  $.fn.buildHeader = function(title, username) {
+    var template = $.template(
+      "<div class='header'><span class='title'>${title}</span> <span>("
+      +   "<a href='http://github.com/${username}'>${username}</a>)"
+      + "</span></div>")
+    return this.append(template, { title: title, username: username });
+  };
+
+  $.fn.buildFooter = function() {
+    return this.append($(
+      "<div class='footer'>"
+        + "<a href='http://gdemir.me/github-badge'>GitHub Badge</a>"
+        + " | "
+        + "Written by <a href='http://gdemir.me'>Gökhan Demir</a>"
+      + "</div>"
+      + "</fieldset>"
+      ));
+  };
+})(jQuery);
