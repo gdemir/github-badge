@@ -50,7 +50,7 @@ GitHubBadge.repo = function(data) {
   $.fn.buildHeader = function(title, username) {
     var template = $.template(
       "<h2 id='boxline'>"
-      +"<div class='header'><span class='title'>${title}</span> <span>("
+      + "<div class='header'><span class='title'>${title}</span> <span>("
       +   "<a href='http://github.com/${username}'>${username}</a>"
       + ")</span></div></h2>")
     return this.append(template, { title: title, username: username });
