@@ -49,9 +49,10 @@ GitHubBadge.gist = function(data) {
 
   $.fn.buildHeader = function(title, username) {
     var template = $.template(
-      "<div class='header'><span class='title'>${title}</span> <span>("
+      "<h2 id='boxline'>"
+      + "<div class='header'><span class='title'>${title}</span> <span>("
       +   "<a href='http://github.com/${username}'>${username}</a>)"
-      + "</span></div>")
+      + "</span></div></h2>")
     return this.append(template, { title: title, username: username });
   };
 
@@ -62,8 +63,8 @@ GitHubBadge.gist = function(data) {
     + " | Designed by"
       + "<ul class='recent photos' style='margin-top:-15px;'>"
         + "<li>"
-        + "<a href='http://gdemir.me' title='Gökhan Demir' style='margin-top:-10px;margin-left:100px;'>"
-            + "<img src='https://secure.gravatar.com/avatar/80a2435e5770620fae90c2b7212188f3gKJDXldwYg+ukMK3ISGI8w=='"
+        + "<a href='http://ondokuz.biz' title='ondokuz.biz' style='margin-top:-10px;margin-left:100px;'>"
+            + "<img src='https://secure.gravatar.com/avatar/1bb587e27cd19e30b27c917efded7972G7WH4nzRnjCyfJF+/e15cg=='"
             + "width='25' height='25'/>"
           + "</a>"
         + "</li>"

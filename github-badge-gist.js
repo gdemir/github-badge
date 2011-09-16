@@ -3,16 +3,16 @@ var GitHubBadge = {};
 GitHubBadge = new function() {
   this.init = function() {
 
-    this.tarayici("http://gdemir.me/github-badge/javascripts/jquery.js");
-    this.tarayici("http://gdemir.me/github-badge/gb-gist.js");
-    this.tarayici("http://gdemir.me/github-badge/javascripts/jquery.template.js", "GitHubBadge.css_yukle");
+    this.tarayici("javascripts/jquery.js");
+    this.tarayici("gb-gist.js");
+    this.tarayici("javascripts/jquery.template.js", "GitHubBadge.css_yukle");
   }
 
   this.css_yukle = function() {
     if(typeof jQuery == 'undefined' || typeof jQuery.template == 'undefined')
       throw("GitHub Badge requires jQuery and jQuery.template");
 
-    var url = 'http://gdemir.me/github-badge/stylesheets/github-badge.css';
+    var url = 'stylesheets/github-badge.css';
     var style_id = 'badge';
     if ("jQuery" in window) {
         jQuery('head').prepend(
@@ -39,7 +39,7 @@ GitHubBadge = new function() {
 
   this.user_yukle = function(username) {
     (function($){
-      var title = ("GITHUB_TITLE" in window && GITHUB_TITLE) || 'My projects';
+      var title = ("GITHUB_TITLE" in window && GITHUB_TITLE) || 'Gistlerim';
       $('#github-badge')
         .empty()
         .buildHeader(title, username)
