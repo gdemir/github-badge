@@ -1,4 +1,4 @@
-@import 'box.css';
+@import url('box.css');
 #github-badge {
   padding: .2em;
   color: black;
