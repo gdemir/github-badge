@@ -1,5 +1,4 @@
 
-
 ![github-badge](http://gdemir.me/chrome/sembol/github-badge.png)
 
 
@@ -19,7 +18,6 @@ github-badge türleri
 			</script>
 			<script src="http://gdemir.me/github-badge/github-badge-repo.js" type="text/javascript">
 			</script>
-		  </div>
 
 
 - Kendi **gist**nizi görmek için sitenize aşağıdaki kodu koymanız yeterli
@@ -33,7 +31,6 @@ github-badge türleri
 			</script>
 			<script src="http://gdemir.me/github-badge/github-badge-gist.js" type="text/javascript">
 			</script>
-		  </div>
 
 ### css ayarları
 
